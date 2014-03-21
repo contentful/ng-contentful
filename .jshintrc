@@ -1,0 +1,33 @@
+{
+  "globalstrict": true,
+  "node": true,
+  "predef": [
+    "describe",
+    "beforeEach",
+    "afterEach",
+    "jasmine",
+    "it",
+    "xit",
+    "inject",
+    "expect",
+    "spyOn",
+    "runs",
+    "waits",
+    "waitsFor",
+    "assert",
+    "refute",
+    "sinon",
+    "define",
+    "angular",
+    "_",
+    "JST",
+    "$",
+    "moment"
+  ],
+  "browser": true,
+  "quotmark": "single",
+  "strict": true,
+  "trailing": true,
+  "unused": true,
+  "sub": true
+}
