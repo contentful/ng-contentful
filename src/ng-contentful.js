@@ -35,7 +35,7 @@
     }];
   });
 
-  module.factory('cfContentTypeList', ['$q', 'contentfulClient', function ($q, contentfulClient) {
+  module.factory('ContentTypeList', ['$q', 'contentfulClient', function ($q, contentfulClient) {
     var cache = {};
     var lookups = {};
 
@@ -69,8 +69,8 @@
     };
   }]);
 
-  module.controller('cfEntryController', ['$scope', 'cfContentTypeList', function ($scope, cfContentTypeList) {
-    $scope.title = function () {
+  module.controller('EntryController', ['$scope', 'ContentTypeList', function ($scope, ContentTypeList) {
+    $scope.entryTitle = function () {
       var contentType = getContentType();
       if (contentType) {
         return $scope.entry.fields[contentType.displayField];
@@ -82,11 +82,11 @@
     };
 
     function lookupContentType() {
-      return cfContentTypeList.lookupContentType(contentTypeId());
+      return ContentTypeList.lookupContentType(contentTypeId());
     }
 
     function getContentType() {
-      var ct = cfContentTypeList.getContentType(contentTypeId());
+      var ct = ContentTypeList.getContentType(contentTypeId());
       if (ct) {
         return ct;
       } else {
