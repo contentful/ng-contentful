@@ -16,7 +16,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "README.md"
+    "README.md",
+    'test'
   ],
   "dependencies": {
     "contentful": "~0.1.0"
