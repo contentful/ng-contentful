@@ -16,22 +16,23 @@ Contentful is a flexible and future-friendly content management platform to crea
 
 Then just include the file by script-tag
 
-     <script type="text/javascript" charset="utf-8" src="bower_components/ng-contentful/src/ng-contentful.js"></script>
+    <script type="text/javascript" charset="utf-8" src="bower_components/ng-contentful/ng-contentful.js"></script>
 
 ## Setup
 
 1. Require the module
 2. In the config phase you set up your connection like so:
+   ```
+   var myApp = angular.module('myApp', ['ng-contentful']);
 
-    var myApp = angular.module('myApp', ['ng-contentful']);
-
-    myApp.config(function (contentfulClientProvider) {
-      contentfulClientProvider.setOptions({
-        // any other options, see contentful.js documentation
-      });
-      contentfulClientProvider.setSpaceId('mySpaceId');
-      contentfulClientProvider.setAccessToken('myAccessToken');
-    });
+   myApp.config(function (contentfulClientProvider) {
+     contentfulClientProvider.setOptions({
+       // any other options, see contentful.js documentation
+     });
+     contentfulClientProvider.setSpaceId('mySpaceId');
+     contentfulClientProvider.setAccessToken('myAccessToken');
+   });
+   ```
 
 ## Usage
 
@@ -58,11 +59,11 @@ Promises:
 
 Provides three methods:
 
-- lookupContentType(id): lookup the contentType by id by fetching the
+- `lookupContentType(id)`: lookup the contentType by id by fetching the
   information from the server if necessary. Returns a promise.
-- loadAllContentTypes: Loads all available contentTypes from the server.
+- `loadAllContentTypes`: Loads all available contentTypes from the server.
   Returns a promise
-- getContentType(id): Synchronously returns contentType. Returns null if
+- `getContentType(id)`: Synchronously returns contentType. Returns null if
   contentType is not yet know to the client.
 
 ### EntryController
@@ -71,8 +72,8 @@ The EntryController assumes there's an `entry` on the scope.
 
 Exposes two methods:
 
-- $scope.entryTitle(): Returns the title for an entry
-- $scope.contentType(): Returns the contentType for an entry if
+- `$scope.entryTitle()`: Returns the title for an entry
+- `$scope.contentType()`: Returns the contentType for an entry if
   available locally. If not available, it triggers a lookup and when the
   lookup is done, $apply gets called so that it then returns the
   contentType.

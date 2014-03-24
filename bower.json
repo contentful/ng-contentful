@@ -11,13 +11,12 @@
     "globals"
   ],
   "license": "MIT",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "README.md"
   ],
   "dependencies": {
     "contentful": "~0.1.0"

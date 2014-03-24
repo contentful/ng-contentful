@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Testing</title>
+    <style type="text/css" media="all">
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Testing</h1>
+    <div class="main" data-ng-app="testapp" data-ng-cloak>
+      <div data-ng-controller="SpaceController">
+        <h2>Space Information</h2>
+        <pre>
+          Space Information: {{space|json}}
+        </pre>
+      </div>
+      <div data-ng-controller="EntriesController">
+        <h2>Entries</h2>
+        <div class="entry" data-ng-repeat="entry in entries track by entry.sys.id" data-ng-controller="EntryController">
+          <h3>{{contentType().name}} {{entry.sys.id}} {{entryTitle()}}</h3>
+          <ul>
+            <li data-ng-repeat="field in contentType().fields track by field.id"
+                data-ng-if="field.id != 'bestFriend'">
+              {{field.name}}: {{entry.fields[field.id]}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" charset="utf-8" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" charset="utf-8" src="bower_components/contentful/dist/contentful.js"></script>
+    <script type="text/javascript" charset="utf-8" src="bower_components/ng-contentful/ng-contentful.js"></script>
+    <script type="text/javascript" charset="utf-8" src="test.js"></script>
+  </body>
+</html>
