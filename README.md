@@ -1,9 +1,14 @@
 # ng-contentful
 
-ng-contentful is a [AngularJS][angularjs] module for accessing the [Contentful][contentful]
-[content delivery API][docs] and integrate content into your website.
+ng-contentful is a [AngularJS][angularjs] module for accessing the [Contentful][contentful] CMS
+[content delivery API][docs] and integrate content like blog posts and
+articles into your website or single-page app.
 
 It wraps the [contentful.js][cfjs] module into AngularJS modules, integrates its asynchronous operations in the digest-cycle and provides a couple of helpers for displaying content.
+
+## What is Contentful ?
+
+Contentful is a flexible and future-friendly content management platform to create and manage your content as well as to deliver it onto mobile and web applications and any other platform.
 
 ## Installation
 

@@ -1,12 +1,12 @@
 {
   "name": "ng-contentful",
-  "version": "0.0.0",
-  "homepage": "https://github.com/thriventures/lab",
+  "version": "0.1.0",
+  "homepage": "https://github.com/contentful/ng-contentful",
   "authors": [
-    "Jan Varwig <jan@varwig.org>"
+    "Jan Varwig <jan@contentful.com>"
   ],
   "description": "An AngularJS module for accessing Contentfuls content-delivery-api",
-  "main": "src/ng-cotnentful.js",
+  "main": "ng-contentful.js",
   "moduleType": [
     "globals"
   ],
@@ -20,7 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.14",
     "contentful": "~0.1.0"
   }
 }
