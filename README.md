@@ -14,8 +14,9 @@ Contentful is a flexible and future-friendly content management platform to crea
 
     bower install ng-contentful
 
-Then just include the file by script-tag
+Then just include the file by script-tag. Note that you also need to include `contentful.js` (declared as a dependency in the bower.json.
 
+    <script type="text/javascript" charset="utf-8" src="bower_components/contentful/dist/contentful.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="bower_components/ng-contentful/ng-contentful.js"></script>
 
 ## Setup
