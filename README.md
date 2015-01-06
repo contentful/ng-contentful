@@ -63,7 +63,7 @@ Provides three methods:
 
 - `lookupContentType(id)`: lookup the contentType by id by fetching the
   information from the server if necessary. Returns a promise.
-- `loadAllContentTypes`: Loads all available contentTypes from the server.
+- `loadAllContentTypes()`: Loads all available contentTypes from the server.
   Returns a promise
 - `getContentType(id)`: Synchronously returns contentType. Returns null if
   contentType is not yet know to the client.
@@ -79,6 +79,34 @@ Exposes two methods:
   available locally. If not available, it triggers a lookup and when the
   lookup is done, $apply gets called so that it then returns the
   contentType.
+
+## Example
+
+A minimum working code example would have two parts besides the setup (see section "Setup").
+
+First, you need to load the ContentTypes and entries (for additional arguments to the `entries` call or other methods available on `contentfulClient` please refer to the [Contentful.js documentation][cfjs]):
+```js
+ContentTypeList.loadAllContentTypes();
+
+contentfulClient.entries().then(function(entries){
+  $scope.entries = entries;
+});
+```
+
+Then, to iterate over your entries in a template:
+
+```html
+<div ng-repeat="entry in entries track by entry.sys.id" ng-controller="EntryController">
+  Entry {{entryTitle()}}
+  <ul>
+    <li ng-repeat="field in contentType().fields track by field.id">
+      {{field.name}}: {{entry.fields[field.id]}}
+    </li>
+  </ul>
+</div>
+```
+
+You can see an example in this Plunker: http://plnkr.co/edit/JboHnB7AgzpizfjbzuIq
 
 [angularjs]: http://angularjs.org
 [contentful]: http://contentful.com
