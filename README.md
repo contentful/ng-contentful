@@ -10,6 +10,10 @@ It wraps the [contentful.js][cfjs] module into AngularJS modules, integrates its
 
 Contentful is a flexible and future-friendly content management platform to create and manage your content as well as to deliver it onto mobile and web applications and any other platform.
 
+## Warning
+
+**This module is not being maintained or updated anymore. You can find a more up to date solution by the community at [https://github.com/jvandemo/angular-contentful](https://github.com/jvandemo/angular-contentful)**
+
 ## Installation
 
     bower install ng-contentful
