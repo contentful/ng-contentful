@@ -1,8 +1,10 @@
+# This repository is deprecated. There is no further support or maintenence planned.
+
+You can find a more up to date solution by the community at [https://github.com/jvandemo/angular-contentful](https://github.com/jvandemo/angular-contentful)
+
+---
+
 # ng-contentful
-
-## Warning
-
-**This module is not being maintained or updated anymore. You can find a more up to date solution by the community at [https://github.com/jvandemo/angular-contentful](https://github.com/jvandemo/angular-contentful)**
 
 ng-contentful is a [AngularJS][angularjs] module for accessing the [Contentful][contentful] CMS
 [content delivery API][docs] and integrate content like blog posts and
